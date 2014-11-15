@@ -1,0 +1,43 @@
+%\paperwidth 96mm
+%\paperheight 141mm
+%\documentclass[a5paper]{book}
+\documentclass{book}
+\usepackage[papersize={96mm,141mm},left=10mm,right=12mm,top=15mm,bottom=15mm,footskip=6mm,headsep=6mm]{geometry}
+\usepackage{fwlw}
+\usepackage{fancyhdr}
+\fancyhf{}
+\fancyhead[RO,LE]{\thepage}
+\fancyhead[CO]{\textcsl{\em\rightmark}}
+\fancyhead[CE]{\textcsl{\em\leftmark}}
+\fancyfoot[RO]{\fontsize{10}{10}\selectfont{ \usebox\NextWordBox }}
+\renewcommand\headrulewidth{0pt}
+\pagestyle{fancy}
+\usepackage{color}
+\usepackage[utf8]{inputenc} % ВСТАВЬТЕ СВОЮ КОДИРОВКУ!
+\usepackage[init]{cslav}
+\usepackage{kinovar}
+\usepackage[T2A]{fontenc}     % Кодировка для гражданского шрифта
+
+%\textwidth 73mm
+%\textheight 110mm
+%\topmargin 9mm
+
+\newcommand*\ruber[1]{{\cslfsize{12}{14}\kinovarsimple{#1}}}
+\newcommand*\laicos[1]{{\cslfsize{12}{14}#1}}
+\newcommand*\centered[1]{{\parindent=0pt\begin{center}#1\end{center}}}
+\newcommand*\ruberc[1]{{\centered{\ruber{#1}}\nopagebreak}}
+
+\begin{document}
+
+\cslfont{pochaev}% Используем староуспенскую гарнитуру
+\cslfsize{14.2}{14}        % размер шрифта - 15 точек; расстояние между строчками
+\parindent 1.2em         % дефолтное; нет отступа в начале абзаца. Между
+\parskip 4pt             % абзацами дополнительно вставляется
+                         % межстрочечный интервал
+
+
+\input{03proskomid}
+
+\input{04liturzlat}
+
+\end{document}
